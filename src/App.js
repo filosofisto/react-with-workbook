@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import './App.css';
 import HorsesScreen from "./screens/HorsesScreen";

@@ -16,7 +16,7 @@ export default class HorsesScreen extends React.Component {
                 </div>
                 <br/>
                 <p>
-                    <string>Changed/New Version Released 1.0</string>
+                    <string>Changed/New Version Released 2.0</string>
                 </p>
                 <p>
                     Bocconcini swiss cut the cheese. Manchego boursin smelly cheese cheesy grin
