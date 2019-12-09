@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen';
 import './App.css';
+import HorsesScreen from "./screens/HorsesScreen";
+import VoltmeterScreen from "./screens/VoltmeterScreen";
+import GeeseScreen from "./screens/GeeseScreen";
+import OfflineScreen from "./screens/OfflineScreen";
+import Page404Screen from "./screens/Page404Screen";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <div>
+              <header>
+                  <h1>Photo blog</h1>
+              </header>
+              <main>
+                  <Switch>
+                      <Route exact path='/' component={HomeScreen} />
+                      <Route path='/horses' component={HorsesScreen} />
+                      <Route path='/voltmeter' component={VoltmeterScreen} />
+                      <Route path='/geese' component={GeeseScreen} />
+                      <Route path='/offline' component={OfflineScreen} />
+                      <Route path='/404' component={Page404Screen} />
+                  </Switch>
+              </main>
+          </div>
+      </Router>
   );
 }
 
